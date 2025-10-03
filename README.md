@@ -17,6 +17,15 @@ pnpm dev
 
 `.env.example` ফাইলটিতে সম্পূর্ণ লোকাল ডিফল্ট মান দেওয়া আছে। ডেভেলপমেন্ট শুরু করার আগে সেটিকে `.env.local` নামে কপি করুন এবং প্রয়োজনে মান পরিবর্তন করুন।
 
+### Vercel পরিবেশ কনফিগারেশন
+
+- Vercel Dashboard → Project Settings → **Environment Variables** এ গিয়ে Production, Preview ও Development—সব পরিবেশে মান সিঙ্ক করুন।
+- Upstash (Redis/KV) সংক্রান্ত কীসমূহ: `KV_URL`, `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `KV_REST_API_READ_ONLY_TOKEN`, `REDIS_URL`।
+- Neon Postgres সংক্রান্ত কীসমূহ: `POSTGRES_URL`, `POSTGRES_PRISMA_URL`, `POSTGRES_HOST`, `NEON_PROJECT_ID`।
+- ক্লায়েন্ট ফেসিং কনফিগারেশন: `NEXT_PUBLIC_STACK_PROJECT_ID`, প্রয়োজনে `NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY`, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`।
+- সার্ভার সাইড সিক্রেট: `STACK_SECRET_SERVER_KEY`, `CLERK_SECRET_KEY` ইত্যাদি `.env.example` অনুসারে যোগ করুন।
+- নতুন মান যোগ করলে অবশ্যই নতুন Deployment ট্রিগার করুন যাতে পরিবর্তন কার্যকর হয়।
+
 ## কোড স্টাইল ও নির্দেশনা
 
 - TypeScript ব্যবহার বাধ্যতামূলক।

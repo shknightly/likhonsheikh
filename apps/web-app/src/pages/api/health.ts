@@ -9,9 +9,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       status: 'ok',
       timestamp: new Date().toISOString(),
       services: {
-        mongodb: Boolean(env.MONGODB_URI),
-        postgres: Boolean(env.DATABASE_URL),
-        redis: Boolean(env.REDIS_URL)
+        postgres: Boolean(env.POSTGRES_URL),
+        redis: Boolean(env.REDIS_URL),
+        upstashKv: Boolean(env.KV_REST_API_URL && env.KV_REST_API_TOKEN),
+        neonProject: env.NEON_PROJECT_ID ?? null
       }
     });
   } catch (error) {
