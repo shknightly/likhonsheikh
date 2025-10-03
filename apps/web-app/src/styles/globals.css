@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply font-bangla-body bg-[#f7f9fb] text-neutral antialiased;
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+.section-title {
+  @apply font-bangla-headline text-3xl md:text-4xl font-bold text-neutral;
+}
+
+.section-subtitle {
+  @apply text-base md:text-lg text-neutral/80;
+}
+
+.site-footer {
+  background-color: white;
+}
