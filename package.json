@@ -1,0 +1,12 @@
+{
+  "name": "likhonsheikh-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.15.3",
+  "scripts": {
+    "dev": "pnpm --filter web-app dev",
+    "build": "pnpm --filter web-app build",
+    "lint": "pnpm --filter web-app lint",
+    "start": "pnpm --filter web-app start"
+  }
+}
